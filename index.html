@@ -41,7 +41,18 @@
           cursor: pointer;
           transition: transform 0.3s ease, box-shadow 0.3s ease;
       }
+      .gallery-video {
+          width: 100%;
+          max-width: 350px;
+          border-radius: 12px;
+          cursor: pointer;
+          transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
 
+          .gallery-video:hover {
+              transform: scale(1.05);
+              box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+          }
           .gallery-img:hover {
               transform: scale(1.05);
               box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
@@ -162,6 +173,9 @@
                     <img src="photo5.jpg" alt="Photo 4" class="gallery-img">
                     <img src="photo6.jpg" alt="Photo 4" class="gallery-img">
                     <img src="photo7.jpg" alt="Photo 4" class="gallery-img">
+                    <video class="gallery-video" controls>
+                        <source src="Adver.mp4" type="video/mp4">
+                    </video>
                 </div>
             </div>
         </section>
@@ -212,7 +226,7 @@
         });
     </script>
     <script>
-        const images = document.querySelectorAll('.gallery-img');
+        const mediaItems = document.querySelectorAll('.gallery-img, .gallery-video');
         const lightbox = document.createElement('div');
         lightbox.id = 'lightbox';
         document.body.appendChild(lightbox);
